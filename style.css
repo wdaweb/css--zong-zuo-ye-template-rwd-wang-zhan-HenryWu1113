@@ -167,6 +167,11 @@
 
 #section01 .contact_info .email a {
   color: rgb(67, 67, 67);
+  transition: 0.3s;
+}
+
+#section01 .contact_info .email a:hover {
+  color: #e48a0c;
 }
 
 #section01 .contact_info .phone {
@@ -340,6 +345,7 @@
 #section03 {
   width: 100%;
   padding-top: 7rem;
+  padding-bottom: 8rem;
 }
 
 #section03 h2 {
@@ -446,7 +452,7 @@
 #section03 .calendar {
   width: 100%;
   padding-top: 4rem;
-  padding-bottom: 7rem;
+  /* padding-bottom: 7rem; */
   margin: auto;
   text-align: center;
 }
@@ -478,6 +484,145 @@
 
 #section03 .calendar a:hover::after {
   top: 100%;
+}
+
+/* footer------------------ */
+
+#footer {
+  width: 100%;
+  padding-top: 3.5rem;
+  padding-bottom: 7rem;
+  background: url('./img/parallax1.png') no-repeat center/cover;
+}
+
+#footer .footer_title {
+  text-align: center;
+}
+
+#footer .footer_title h3 {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#footer .footer_title p {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#footer .footer_title a {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#footer .footer_title a:hover {
+  color: #e48a0c;
+}
+
+#footer .footer_contact {
+  text-align: center;
+}
+
+#footer .footer_contact p {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_contact .email a {
+  color: white;
+  transition: 0.3s;
+}
+
+#footer .footer_contact .email a:hover {
+  color: #e48a0c;
+}
+
+#footer .footer_contact .phone a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#footer .footer_contact .phone a:hover {
+  text-decoration: underline;
+}
+
+#footer .footer_contact .phone span:first-child {
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#footer .footer_contact .phone span:last-child {
+  color: #e48a0c;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#footer .footer_contact ul {
+  list-style: none;
+  font-family: none;
+}
+
+#footer .footer_contact ul li {
+  display: inline-block;
+}
+
+#footer .footer_open {
+  text-align: center;
+}
+
+#footer .footer_open p:nth-child(1) {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_open p:nth-child(2) {
+  color: #e48a0c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_open p:nth-child(3) {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_open p:nth-child(4) {
+  color: #e48a0c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_open p:nth-child(5) {
+  margin-top: 2rem;
+  color: #e48a0c;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+#footer .footer_open p:nth-child(6) {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 /* 通用 */

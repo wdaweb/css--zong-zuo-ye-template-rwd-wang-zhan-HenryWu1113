@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css' integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==' crossorigin='anonymous'/>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <!-- Link Swiper's CSS -->
@@ -68,7 +67,7 @@
             USA - Los Angeles, 901 East E Street, Wilmington, CA 90744
           </p>
           <p class="email">
-            E -mail: <a href="">mail@demonlink.org</a>
+            E -mail: <a href="#">mail@demonlink.org</a>
           </p>
           <p class="phone">
             <a href="">
@@ -252,9 +251,54 @@
     </div>
   </div>
 
+  <div id="footer">
+      <div class="container">
+      <div class="row">
+        <div class="footer_title">
+          <h3>Botanic garden</h3>
+          <p>© 2022</p>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer_contact">
+          <p>
+            USA - Los Angeles, 901 East E Street, Wilmington, CA 90744
+          </p>
+          <p class="email">
+            E -mail: <a href="#">mail@demonlink.org</a>
+          </p>
+          <p class="phone">
+            <a href="">
+              <span>(800)</span>
+              <span>123 1234</span>
+            </a>
+          </p>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer_open">
+          <p>Tuesday - Friday:</p>
+          <p>8a.m. to 4:30p.m.</p>
+          <p>Saturday & Sunday:</p>
+          <p>10a.m. to 4:30p.m.</p>
+          <p>Closed mondays</p>
+          <p>(But open Martin Luter King JR. day, 10a.m. to 4:30p.m.)</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- gsap 主程式 -->
+  <script src="./gsap/gsap.js"></script>
+  <!-- 引入 scrollTrigger plugin -->
+  <script src="./gsap/ScrollTrigger.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
@@ -264,6 +308,19 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.to('#footer', {
+        scrollTrigger: {
+          trigger: '#footer',
+          start: 'top bottom',
+          end: 'bottom 0%',
+          scrub: true, // 綁定捲動軸與動畫進度
+          markers: true
+        },
+        backgroundPosition: '50% -50%', // 改變 y 軸位移
+        ease: 'linear'
+      })
   </script>
 </body>
 </html>
