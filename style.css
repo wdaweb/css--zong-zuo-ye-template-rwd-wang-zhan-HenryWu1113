@@ -82,7 +82,18 @@
   display: none;
 }
 
-#header .background_place {
+#header .background_place_out {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* overflow: hidden; */
+}
+
+#header .background_place_in {
   width: 220px;
   height: 220px;
   position: absolute;
@@ -92,7 +103,7 @@
   overflow: hidden;
 }
 
-#header .background_place .background_square {
+#header .background_place_in .background_square {
   width: 320px;
   height: 320px;
   position: absolute;
@@ -102,17 +113,17 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-#header .background_place .background_square .background_square_filter {
+#header .background_place_in .background_square .background_square_filter {
   width: 100%;
   height: 100%;
   backdrop-filter: brightness(60%);
   position: absolute;
 }
 
-#header hr,
+/* #header hr,
 #section02 hr {
   display: none;
-}
+} */
 
 #header .brand_wrap {
   /* width: 150px; */
@@ -763,7 +774,7 @@
     font-weight: 700;
   }
 
-  #header .background_place {
+  #header .background_place_in {
     width: 500px;
     height: 500px;
     position: absolute;
@@ -773,7 +784,7 @@
     overflow: hidden;
   }
 
-  #header .background_place .background_square {
+  #header .background_place_in .background_square {
     width: 740px;
     height: 740px;
     position: absolute;
@@ -800,4 +811,45 @@
     font-size: 18px;
     line-height: 30px;
   }
+
+  #header .top_left {
+    width: 104px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -180%;
+    top: 10%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  #header .top_right {
+    width: 104px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: -180%;
+    top: 10%;
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
+
+  #header .bottom_left {
+    width: 104px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -180%;
+    bottom: -350%;
+    transform: translate(-50%, 50%) rotate(135deg);
+  }
+
+  #header .bottom_right {
+    width: 104px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    right: -180%;
+    bottom: -350%;
+    transform: translate(50%, 50%) rotate(45deg);
+  }
+
 }
