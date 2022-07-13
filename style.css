@@ -78,6 +78,9 @@
   position: relative;
 }
 
+#header .list {
+  display: none;
+}
 
 #header .background_place {
   width: 220px;
@@ -99,13 +102,20 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+#header .background_place .background_square .background_square_filter {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(60%);
+  position: absolute;
+}
+
 #header hr,
 #section02 hr {
   display: none;
 }
 
 #header .brand_wrap {
-  width: 150px;
+  /* width: 150px; */
   position: absolute;
   left: 50%;
   top: 50%;
@@ -245,7 +255,7 @@
 
 #section02 .swiper .swiper-button-next {
   position: absolute;
-  left: 53%;
+  left: 55%;
   top: 90%;
   transform: translateX(-50%);
   color: white;
@@ -253,11 +263,21 @@
 
 #section02 .swiper .swiper-button-prev {
   position: absolute;
-  left: 47%;
+  left: 45%;
   top: 90%;
   transform: translateX(-50%);
   color: white;
 }
+
+/* #section02 .swiper .btn_box {
+  margin: auto;
+  pointer-events: none;
+  width: 60px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
 
 #section02 .diamond {
   width: 100%;
@@ -288,6 +308,7 @@
 #section02 .diamond_cnt .btn-wrap {
   width: 100%;
   height: 300px;
+  pointer-events: none;
   /* position: relative; */
 }
 
@@ -625,6 +646,51 @@
   line-height: 28px;
 }
 
+/* backtop------------------- */
+
+.backtop {
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;
+  /* background: yellow; */
+}
+
+.backtop a {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  top: 60%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background: #434343;
+  transition: 0.3s;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+/* .backtop a::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.backtop a:hover {
+  background: #e48a0c;
+}
+
 /* 通用 */
 
 .row {
@@ -657,4 +723,81 @@
   /* flex: 1 0 0%; */
   flex: 0 0 auto;
   /* width: 50%; */
+}
+
+@media (min-width:768px) {
+  #bar {
+    display: none;
+  }
+
+  #header {
+    height: 906px;
+    padding-top: 6rem;
+  }
+
+  #header .list {
+    width: 675px;
+    height: 28px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  #header .list a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  #header .list li:first-child a {
+    color: rgb(83, 87, 85);
+  }
+
+  #header .list a:hover {
+    color: rgb(83, 87, 85);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #header .background_place {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    overflow: hidden;
+  }
+
+  #header .background_place .background_square {
+    width: 740px;
+    height: 740px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('./img/header-bg.jpg') no-repeat 60% 25%/300%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  #header hr {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    border-color: white;
+    position: absolute;
+  }
+
+  #header .brand_wrap .brand_name a {
+    font-size: 80px;
+    line-height: 86.666px;
+  }
+
+  #header .brand_wrap .brand_slogan p {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
