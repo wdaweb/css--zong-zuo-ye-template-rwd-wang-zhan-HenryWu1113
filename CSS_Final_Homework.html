@@ -4,29 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css' integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==' crossorigin='anonymous'/>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <!-- 1. AOS 的 css -->
+  <link rel="stylesheet" href="./css/aos.css">
   <title>Home</title>
 </head>
 <body>
   <div id="bar">
-    <button class="left-bar-button">
+    <input type="checkbox" id="open_list" class="bar_btn">
+    <label for="open_list" class="left-bar-button">
       <span class="left-bar-icon"></span>
-    </button>
+    </label>
+    <ul>
+      <li class="active"><a href="#"> Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Events & Classes</a></li>
+      <li><a href="#">Get Involved</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
     <h2>Home</h2>
   </div>
 
   <div id="header">
     <ul class="list">
-      <li><a href=""> Home</a></li>
-      <li><a href="">About us</a></li>
-      <li><a href="">Events & Classes</a></li>
-      <li><a href="">Get Involved</a></li>
-      <li><a href="">Contacts</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Events & Classes</a></li>
+      <li><a href="#">Get Involved</a></li>
+      <li><a href="#">Contacts</a></li>
     </ul>
     <div class="background_place_in">      
       <div class="background_square">
@@ -71,12 +80,12 @@
     <div class="container">
       <h2>Welcome!</h2>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-once="true">
           <p class="text-secondary">
             Discover with us one of the most beautiful botanic gardens in the world. Take a stroll in woods and meadows, wander in only a few minutes from Alps to Caucasus, let Far - Eastern plants enchant you and feel the Tropical Rainforest with all your senses.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" data-aos-delay="200" data-aos-once="true">
           <p class="text-secondary">
             Plunge in this green oasis and take off for a trip far away from the fuss of the city. As many people say, time will run slower here. And after the garden, deepen your impressions in our astounding botanical museum. Admire extraordinary exhibits and let yourself be fascinated.
           </p>
@@ -95,13 +104,13 @@
             </a>
           </p>
         </div>
-        <div class="col-md-6-lg-3 contact_info_2">
+        <div class="col-md-6-lg-3 contact_info_2" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"  data-aos-delay="100" data-aos-once="true">
           <p class="text-secondary">Tuesday - Friday:</p>
           <p>8a.m. to 4:30p.m.</p>
           <p class="text-secondary">Saturday & Sunday:</p>
           <p>10a.m. to 4:30p.m.</p>
         </div>
-        <div class="col-md-6-lg-3 contact_info_3">
+        <div class="col-md-6-lg-3 contact_info_3" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"  data-aos-delay="300" data-aos-once="true">
           <p>Closed mondays</p>
           <p class="text-secondary">(But open Martin Luter King JR. day, 10a.m. to 4:30p.m.)</p>
         </div>
@@ -110,13 +119,13 @@
             This year, make a resolution to engage with nature at the Garden. Trail a scenic path on a calm winter day and take in the fleeting beauty of the season.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"  data-aos-delay="150" data-aos-once="true">
           <p class="text-secondary">
             The Botanic Garden is the most compact, yet diverse collection of plants in the World right in the heart of the city centre and is open throughout the year for you to visit and enjoy.
           </p>
         </div>
       </div>
-      <div class="read_more" >
+      <div class="read_more" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"  data-aos-delay="100" data-aos-once="true">
         <a href="#">Read more</a>
       </div>
     </div>
@@ -213,8 +222,8 @@
 
   <div id="section03">
     <div class="container">
-      <h2>Our updates:</h2>
-      <div class="row">
+      <h2  data-aos="fade-up" data-aos-duration="1100" data-aos-offset="150" data-aos-once="true">Our updates:</h2>
+      <div class="row"  data-aos="slide-left" data-aos-duration="1100" data-aos-offset="150" data-aos-once="true">
         <div class="sec03_date_odd">
           <p>April</p>
           <p>15</p>
@@ -231,7 +240,7 @@
         </div>
       </div>
       <hr>
-      <div class="row">
+      <div class="row"  data-aos="slide-right" data-aos-duration="1100" data-aos-offset="150" data-aos-once="true">
         <div class="sec03_date_even">
           <p>April</p>
           <p>17</p>
@@ -248,7 +257,7 @@
         </div>
       </div>
       <hr>
-      <div class="row">
+      <div class="row"  data-aos="slide-left" data-aos-duration="1100" data-aos-offset="150" data-aos-once="true">
         <div class="sec03_date_odd">
           <p>April</p>
           <p>19</p>
@@ -324,9 +333,11 @@
   <script src="./gsap/gsap.js"></script>
   <!-- 引入 scrollTrigger plugin -->
   <script src="./gsap/ScrollTrigger.js"></script>
+  <!-- 2. AOS 的主程式 js -->
+  <script src="./js/aos.js"></script>
 
-  <!-- Initialize Swiper -->
   <script>
+    // Initialize Swiper
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       navigation: {
@@ -360,6 +371,11 @@
     opacity: 1,
     duration: 0.5
 })
+
+    // 3. 啟動 AOS
+    AOS.init()
+
+
   </script>
 </body>
 </html>
